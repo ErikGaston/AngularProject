@@ -10,68 +10,59 @@ body{
     float:none;
     clear:both;
 }
-/* Barra de navegacion / cabecera */
-header{
-    width: 100%;
-    height: 15%;
-    background: rgba(53,103,164,0.8);
-    display: block;
-    position: fixed;
+
+/****************************************Barra de navegacion*/
+.navbar {
+    z-index: 999;
+    padding-top: 1.5%;
+    transition: all 1s ease-in-out;
+}
+/*LOGO*/
+.navbar-dark .navbar-brand {
+    color: white;
+}
+
+.nav-item a {
+    color: white !important;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
     text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    padding-left: 10px;
 }
 
-header ul{
-display: block;
-width: 80%;
-height: inherit;
-margin: 0px auto;
-}
-
-header ul li{
-    display: inline-block;
-    margin: 0px auto;
-    text-align: center;
-    line-height: 90px;
-}
-
-header a{
+.navbar .navbar-nav > li > a:hover {
     display: block;
-    padding-right: 20px;
-    padding-left: 20px;
-    height: inherit;
-    text-decoration: none;
-    color:white;
-    transition: all 300ms;
+    color:yellow !important;
+    border-radius: 100px 100px 100px 100px;
+    -webkit-border-radius: 100px 100px 100px 100px; /*Safari y Chrome*/
+    -moz-border-radius: 100px 100px 100px 100px; /*Mozilla*/
+    float: none;
+    transition: background-color 200ms ease;
 }
+/****************************************Carousel*/
 
-header a:hover{
-    background: rgba(0,0,0,0.6);
-}
 
-/*  Logo  */
-#logo{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30px;
-}
-
-#logo a{
-    transition: color 500ms, transform 500ms;
-}
-
-#logo a:hover{
-    background:transparent;
-    color:black;
-    transform:scale(1.50,1.50);
-}
-
-/* Contenedor princiapl */
+/****************************************Contenido principal*/
 #content{
-
-    width: 75%;
-    margin: 0px auto;
+    width: 90%;
     box-shadow: 0px 0px 40px black;
     background: rgba(255, 255, 255, 0.7);
-    height: 100%;
-    padding-bottom: 20%;
+    min-height: 700px;
+    padding: 10%;
+    margin: 0px auto;
+}
 
+
+/****************************************Footer*/
+footer{
+    text-align: center  ;
+    width: 50%;
+    margin: 0px auto;
+    padding-top: 25px;
+    color: rgba(0,0,0,0.5);
 }

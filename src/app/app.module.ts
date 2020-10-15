@@ -7,23 +7,26 @@ import { AppRoutingModule } from './app.routing';
 
 import { HomeComponent } from './componentes/home/home.component';
 import { AboutComponent } from './componentes/about/about.component';
-import { ProjectsComponent } from './componentes/projects/projects.component';
-import { CreateComponent } from './componentes/create/create.component';
 import { ContactComponent } from './componentes/contact/contact.component';
+import { CarouselComponent } from './componentes/carousel/carousel.component';
+import { ServiceComponent } from './componentes/service/service.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ProjectsComponent,
-    CreateComponent,
     ContactComponent,
+    CarouselComponent,
+    ServiceComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [
   ],
