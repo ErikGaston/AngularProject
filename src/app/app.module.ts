@@ -12,6 +12,7 @@ import { CarouselComponent } from './componentes/carousel/carousel.component';
 import { ServiceComponent } from './componentes/service/service.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavComponent } from './componentes/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ContactComponent,
     CarouselComponent,
     ServiceComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
