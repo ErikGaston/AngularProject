@@ -20,13 +20,25 @@ export class ContactoService{
         let params = JSON.stringify(contacto);
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-        return this._http.post(this.url+'save-contact', params, {headers: headers});
+        return this._http.post(this.url + 'save-contact', params, {headers: headers});
     }
 
     getContacts(): Observable<any>{
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
         return this._http.get(this.url + 'contacts', {headers: headers});
+    }
+
+    getContact(id): Observable<any>{
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+        return this._http.get(this.url + 'contact/' + id, {headers: headers});
+    }
+
+    deleteContact(id): Observable<any>{
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+        return this._http.delete(this.url + 'contact/' + id, {headers: headers});
     }
 
 }

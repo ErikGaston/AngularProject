@@ -1,10 +1,19 @@
 <div class="container">
+    <h2>Contactos</h2>
+    <ul>
+        <li *ngFor = "let contact of contacts">
+            <h2>{{contact.name}}</h2>
+            <p>{{contact.telephone}}</p>
+            <p>{{contact.email}}</p>
+            <p>{{contact.message}}</p>
+        </li>
+    </ul>
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let contact of contacts">
-            {{contact.name}}
-            {{contact.telephone}}
-            {{contact.email}}
-            {{contact.message}}
+        <li class="list-group-item" *ngFor = "let contact of contacts">
+            <h2>{{contact.name}}</h2>
+            <p>{{contact.telephone}}</p>
+            <p>{{contact.email}}</p>
+            <p>{{contact.message}}</p>
         </li>
       </ul>
 </div>
