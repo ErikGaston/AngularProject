@@ -1,4 +1,4 @@
-export class ContactoUsuario{
+export class Contact{
     constructor(
         public name:string,
         public telephone:string,

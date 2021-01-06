@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ContactoUsuario } from '../modelo/contacto.usuario';
+import { Contact } from '../modelo/contacto.usuario';
 import { Global } from './global';
 
 
@@ -16,11 +16,17 @@ export class ContactoService{
         this.url = Global.url;
     }
 
-    saveContact(contacto: ContactoUsuario): Observable<any>{
+    saveContact(contacto: Contact): Observable<any>{
         let params = JSON.stringify(contacto);
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
         return this._http.post(this.url+'save-contact', params, {headers: headers});
+    }
+
+    getContacts(): Observable<any>{
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+        return this._http.get(this.url + 'contacts', {headers: headers});
     }
 
 }

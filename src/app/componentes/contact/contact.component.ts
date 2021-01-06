@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactoService } from 'src/app/service/contacto.usuario.service';
-import {ContactoUsuario} from '../../modelo/contacto.usuario';
+import {Contact} from '../../modelo/contacto.usuario';
 
 @Component({
   selector: 'app-contact',
@@ -11,13 +11,13 @@ import {ContactoUsuario} from '../../modelo/contacto.usuario';
 
 export class ContactComponent implements OnInit {
   public title: string;
-  public contacto: ContactoUsuario;
+  public contacto: Contact;
 
   constructor(
     private _contactService: ContactoService
   ) { 
     this.title = "Escribinos...";
-    this.contacto = new ContactoUsuario("","","","");
+    this.contacto = new Contact("","","","");
   }
 
   ngOnInit(): void {
